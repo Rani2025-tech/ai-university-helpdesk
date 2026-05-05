@@ -2,11 +2,13 @@
 
 An intelligent RAG-based chatbot that answers student queries about NIST University Berhampur using university documents. Supports English, Hindi, and Odia languages.
 
+🌐 **Live Demo:** https://ai-university.streamlit.app
+
 ## 🚀 Demo
 ![Helpdesk Demo](docs/architecture.png)
 
 ## 🛠️ Tech Stack
-- **LLM** — Ollama (llama3.2:1b) — runs fully offline
+- **LLM** — Groq (llama-3.3-70b-versatile)
 - **RAG Framework** — LangChain
 - **Vector Database** — FAISS
 - **Embeddings** — HuggingFace (all-MiniLM-L6-v2)
@@ -20,7 +22,7 @@ An intelligent RAG-based chatbot that answers student queries about NIST Univers
 - Multilingual support — English, Hindi, Odia
 - Auto language detection
 - REST API backend with Swagger docs at /docs
-- Fully offline — no API keys needed
+- Powered by Groq API (fast cloud LLM)
 
 ## 🏗️ Architecture
 ```
@@ -46,34 +48,31 @@ rag_env\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Install and run Ollama
-Download Ollama from https://ollama.com
-```bash
-ollama pull llama3.2:1b
-ollama serve
-```
-
-### 5. Create .env file
+### 4. Create .env file
 ```env
-OLLAMA_MODEL=llama3.2:1b
-OLLAMA_BASE_URL=http://localhost:11434
-DATA_PATH=data/
-FAISS_INDEX_PATH=faiss_index/
+GROQ_API_KEY=your_groq_api_key_here
+FAISS_INDEX_PATH=faiss_index
+ADMIN_PASSWORD=your_admin_password
 ```
 
-### 6. Start FastAPI backend
+### 5. Start FastAPI backend
 ```bash
 python -m uvicorn backend.main:app --reload
 ```
 
-### 7. Start Streamlit frontend
+### 6. Start Streamlit frontend
+```bash
+streamlit run frontend/app.py
+```
+
+### 7. Open browser
 ```bash
 streamlit run frontend/app.py
 ```
 
 ### 8. Open browser
 ```
-http://localhost:8501
+https://ai-university.streamlit.app
 ```
 
 ## 📁 Project Structure
