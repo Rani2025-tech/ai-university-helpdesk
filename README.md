@@ -3,6 +3,7 @@
 An intelligent RAG-based chatbot that answers student queries about NIST University Berhampur using university documents. Supports English, Hindi, and Odia languages.
 
 🌐 **Live Demo:** https://ai-university.streamlit.app
+🎥 Demo Video: https://youtu.be/ZTj2ax1FWFk
 
 ## 🚀 Demo
 ![Helpdesk Demo](docs/architecture.png)
