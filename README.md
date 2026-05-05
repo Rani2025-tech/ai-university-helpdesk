@@ -31,7 +31,7 @@ Student Question → Streamlit UI → FastAPI → RAG Pipeline → FAISS Search 
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-university-helpdesk.git
+git clone https://github.com/Rani2025-tech/ai-university-helpdesk.git
 cd ai-university-helpdesk
 ```
 
